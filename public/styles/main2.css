@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap");
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+  overflow-x: hide;
+}
+
+
+
+body {
+  
+  
+  overflow-x: hidden;
+  background-color: #0e141e;
+}
+.text{
+    overflow-x: hidden;
+    color:  #ffffff; 
+}
+
+      
+      .nutriplus-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+nav {
+  height: 4rem;
+  width: 100vw;
+  margin: auto;
+  box-shadow: 0 3px 8px #ffffff(0, 0, 0, 0.2);
+  display: flex;
+  z-index: 10;
+}
+
+/* =========== STYLING LOGO =========== */
+
+.logo {
+  padding: 2vh 5vw;
+  text-align: center;
+}
+.logo img {
+  width: 60px;
+}
+
+/* =========== STYLING LINKS =========== */
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50vw;
+  margin: auto;
+  padding: 0 0.7vw;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 1000;
+}
+.nav-links li a {
+  text-decoration: none;
+  margin: 0 0.7vw;
+  color: #ffffff;
+}
+
+.nav-links li a:hover {
+  border-bottom: 3px solid #47cf73;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: #ffffff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.hamburger {
+  display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 2%;
+    top: 4%;
+    transform: translate(-5%, -50%);
+    z-index: 1200;
+    transition: all 0.7s ease;
+  }
+  .nav-links {
+    position: fixed;
+    background: #47cf73;
+    height: 50vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .nav-links a:hover {
+    color: #fff;
+    transition: 0.6s;
+    text-decoration: none;
+  }
+
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.7s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(6) {
+    transition: all 0.5s ease 0.9s;
+    margin: 0;
+  }
+  .nav-links li:nth-child(7) {
+    transition: all 0.5s ease 1s;
+    margin: 0;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+/* ============= HAMBURGER ANIMATION ON CLICK ============= */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ========== LANDING PAGE CONTENT ==========  */
+
+.container {
+  /* background-color: #F6F6F6; */
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1140px;
+  height: 300px;
+  left: 0;
+  right: 0;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.text {
+  width: 70%;
+}
+
+.text h1 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  line-height: 4.5rem;
+  font-weight: 700;
+}
+
+.html {
+    cursor: none;
+    --text: #FFF;
+    background: #ffffff;
+    scroll-behavior: smooth;
+  }
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 2;
+    pointer-events: none;
+    div {
+        position: absolute;
+        display: grid;
+        place-items: center;
+        div {
+          border: 1px solid #fff;
+          border-radius: 50%;
+          animation: pulse 2.5s linear infinite;
+          box-shadow: 0 0 50px 5px #d7abff6e;
+        }     
+    }
+  }
+.text .underline {
+  color: #ffffff;
+  text-decoration: underline 12px #47cf73;
+  
+  animation: overcome 3s ease-in-out forwards;
+}
+
+@keyframes overcome {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  100% {
+    opacity: 5;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+.text span {
+  color: #ffffff;
+  font-weight: 700;
+  
+  animation: overcome 5s ease-in-out forwards;
+}
+
+@keyframes overcome {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  100% {
+    opacity: 5;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+
+      
+
+.text p {
+  font-size: 1.1rem;
+  padding: 10px 0px;
+  color: #898994
+}
+
+.buttons {
+  display: block;
+  padding: 35px 0px;
+}
+
+.text .red-btn {
+  padding: 13px 20px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #47cf73;
+}
+
+.text .red-btn:hover {
+    
+        display: inline-block;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: #00d1a0;
+        color: white;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .nutriplus-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+
+.text .black-btn {
+  padding: 13px 20px;
+  color: #fff;
+  font-weight: 600;
+
+  background-color: #121212;
+  text-transform: uppercase;
+}
+
+.text .black-btn:hover {
+  background-color: #1d1d1d;
+  transition: 0.5s;
+}
+
+.text a {
+  text-decoration: none;
+}
+
+.text .__certificate {
+  display: inline;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: block;
+  color: #ffffff;
+  padding: 10px 0px;
+}
+
+.visual {
+  width: 500px;
+  height: 500px;
+}
+
+.visual img {
+  position: relative;
+  left: 100px;
+  top: -17px;
+  z-index: -10;
+}
+
+
+
+.visual #threadmill {
+  position: relative;
+  left: 150px;
+  top: -270px;
+}
+
+.visual #dumbbell {
+  position: relative;
+  left: 60px;
+  top: -410px;
+}
+
+.visual #kettlebell {
+  position: relative;
+  left: 0px;
+  top: -520px;
+  z-index: -11;
+}
+
+@media screen and (max-width: 1020px) and (min-width: 900px) {
+  .content .text h1{
+    font-size: 3.5rem;
+    line-height: 3.6rem;
+  }
+
+  .content .text .underline{
+    text-decoration: underline 8px #ffffff;
+  }
+
+  .content .text p{
+    font-size: 1rem ;
+  }
+
+  .buttons .red-btn, .black-btn{
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .buttons .black-btn{
+    padding: 10px 18px;
+    font-size: 13px;
+
+  }
+
+}
+
+@media screen and (max-width: 900px) and (min-width: 800px){
+  
+  .content {
+    width: 90%;
+  }
+  
+  .content .text h1{
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+
+  .content .text .underline{
+    text-decoration: underline 7px #47cf73;
+  }
+
+  .content .text p{
+    font-size: 0.9rem ;
+  }
+
+  .buttons .red-btn, .black-btn{
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .buttons .black-btn{
+    padding: 10px 18px;
+    font-size: 13px;
+
+  }
+}
+
+@media screen and (min-width:700px) and (max-width: 800px){
+
+  .content .text{
+    width: 240px;
+  }
+
+  .content .text h1{
+    font-size: 2.9rem;
+    line-height: 3.0rem;
+  }
+
+  .content .text .underline{
+    text-decoration: underline 7px #47cf73;
+  }
+
+  .content .text p{
+    font-size: 0.9rem ;
+  }
+
+  .buttons .red-btn, .black-btn{
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+
+  .buttons .black-btn{
+    padding: 8px 15px;
+    font-size: 13px;
+
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .content{
+    /* flex-direction: column-reverse; */
+    height: 100%;
+  }
+
+  .visual .man{
+    width: 24rem;
+  }
+
+  .visual #threadmill{
+    width: 50px;
+    position: absolute;
+    top: 420px;
+    left: 480px;
+  }
+
+  .visual #kettlebell{
+    width: 100px;
+    position: relative;
+    top: -400px;
+    left: 200px;
+  }
+
+  .visual #dumbbell{
+    position: absolute;
+    top: 300px;
+    left: 430px;
+  }
+
+  .content .text{
+    width: 240px;
+  }
+
+  .content .text h1{
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+  }
+
+  .content .text .underline{
+    text-decoration: underline 7px #47cf73;
+  }
+
+  .content .text p{
+    font-size: 0.9rem ;
+  }
+
+  .buttons .red-btn, .black-btn{
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+
+  .buttons .black-btn{
+    padding: 8px 15px;
+    font-size: 13px;
+
+  }  
+}
+
+@media screen and (max-width: 650px){
+  .container{
+    height: 850px;
+  }
+
+  .content{
+    flex-direction: column;
+  }
+
+  .content{
+    margin-top: 40px;
+  }
+  
+  .visual #threadmill {
+    position: relative;
+    top: -15px;
+    left: -210px;
+  }
+
+  .visual #dumbbell{
+    position: relative;
+    top: -230px;
+    left: 120px;
+  }
+
+  .visual #kettlebell{
+    position: relative;
+    top: -390px;
+    left: 90px;
+  }
+
+}

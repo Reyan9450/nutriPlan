@@ -1,0 +1,71 @@
+<%- include('header.ejs') %>
+<script>
+  // Function to hide minimum value fields and set their default value to 0
+  const hideMinValueFields = () => {
+    // Get all input elements with name attributes starting with "min"
+    const minInputs = document.querySelectorAll('input[name^="min"]');
+    // Iterate over the input elements
+    minInputs.forEach(input => {
+      // Hide the input element
+      input.style.display = 'none';
+      // Set the default value to 0
+      input.value = 0;
+    });
+  };
+
+  // Call the function when the page loads
+  window.onload = hideMinValueFields;
+
+  // Function to handle cheat day button click
+  const handleCheatDayButtonClick = () => {
+    fetch('/cheatday') // Send GET request to /cheatday route
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response data, e.g., display the cheat day recipe details
+        console.log(data);
+      })
+      .catch(error => {
+        console.error('Error fetching cheat day recipe:', error);
+      });
+  };
+</script>
+<div class="form_main_container">
+
+
+    <div class="form_title">
+        <h1>Your NutriPlan</h1>
+    </div>
+    <div class="form_container ">
+    
+        <form action="/post" method="post" id="recipeForm">
+            <label for="energyMax">Energy:</label>
+            <input type="number" name="energyMax" id="energyMax"><br>
+          
+            <label for="carbohydratesMax">Carbohydrates:</label>
+            <input type="number" name="carbohydratesMax" id="carbohydratesMax"><br>
+          
+            <label for="fatMax">Fat:</label>
+            <input type="number" name="fatMax" id="fatMax"><br>
+          
+            <label for="proteinMax">Protein:</label>
+            <input type="number" name="proteinMax" id="proteinMax"><br>
+          
+            <!-- <button type="button" onclick="handleCheatDayButtonClick()">Cheat Day</button> -->
+            <button type="submit">Submit</button>
+          
+            <!-- Button to trigger cheat day action -->
+          </form>
+          
+    </div>
+    <div class="cheatday_form">
+        <form action="/cheatday" method="post">
+          
+            <p>!!!Agar ho gaya ho jada healthy to<br> ek din ho jaye cheat day!!!</p>
+            <button type="submit">Cheat Day</button>
+          
+          </form>
+
+    </div>
+</div>
+
+<%- include('footer.ejs') %>

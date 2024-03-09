@@ -1,0 +1,185 @@
+/* Styles for general recipe information */
+.recipe_container_main {
+    background-color: rgb(246, 249, 251);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.recipe_container {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    justify-content: space-around;
+    
+    
+}
+.recipe_general_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+  
+   img {
+    
+    
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #ccc;
+  }
+  
+  #recipe_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:#47cf73 ;
+  }
+  
+  #recipe_protien,
+  #recipe_carb,
+  #recipe_energy,
+  #recipe_fat,
+  #recipe_cal {
+    margin-bottom: 5px;
+  }
+  
+  /* Styles for diet information */
+  .recipe_diet_info {
+    margin-top: 10px;
+  }
+  
+  .recipe_diet {
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  
+  /* Footer styles */
+  .footer {
+
+    margin-top: 16px;
+    text-align: center;
+  }
+  .recipe_bold{
+    font-weight: 700;
+  }
+
+  .footer p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .form_container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #45a049;
+     font-weight:700 ;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #1b1919;
+    background-color:white;
+    color: #0c0c0c;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Styling for cheat day section */
+  .cheat_day_section {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  
+  .cheat_day_section p {
+    color: #ffcc00;
+    font-weight: bold;
+  }
+  .form_title h1{
+    font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #45a049;
+  font-size: 40px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  }
+  .form_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cheatday_form p{
+    font-family: "Ultra", serif;
+  font-weight: 400;
+  color: #00751f;
+  font-style: normal;
+  font-size: 30px;
+  }
+  .cheatday_form{
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .about_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    margin: 50px auto;
+    width: 600px;
+  }
+  
+  .about_container p {
+    color: #fff;
+  }
+  .about_container span{
+    font-weight: 700;
+    color: #45a049;
+  }
+
+  /* .recipe_img_container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+  } */
+  
+  .recipe_img_container img {
+    
+  
+    transition: transform 0.3s ease;
+  }
+  
+  .recipe_img_container img:hover {
+    transform: scale(1.1);
+  }

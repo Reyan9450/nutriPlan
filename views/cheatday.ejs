@@ -1,0 +1,32 @@
+<%- include('header.ejs') %>
+
+<div class="recipe_container_main">
+
+    <div class="recipe_container">
+
+        <div class="recipe_img_container">
+            <img src="<%= recipe.img_url %>" alt="image" width="400px">
+        </div>
+        <div class="recipe_general_info">
+            <p id="recipe_title"><%= recipe.Recipe_title %></p>
+            <p id ="recipe_protien"><span class="recipe_bold">Protein:</span> <%= recipe['Protein (g)'] %>g</p>
+            <p id ="recipe_carb"><span class="recipe_bold">Carbohydrates:</span> <%= recipe['Carbohydrate, by difference (g)'] %>g</p>
+            <p id="recipe_energy"><span class="recipe_bold">Energy:</span> <%= recipe['Energy (kcal)'] %> kcal</p>
+            <p id="recipe_fat"><span class="recipe_bold">Fat:</span> <%= recipe['Total lipid (fat) (g)'] %>g</p>
+            <p id="recipe_cal"><span class="recipe_bold">Calories:</span> <%= recipe.Calories %> kcal</p>
+            <% if (recipe.vegan === "1" && recipe.ovo_vegetarian === "1") { %>
+                <p class="recipe_diet"><span class="recipe_bold">Diet:</span> Ovo-Vegetarian</p>
+            <% } else if (recipe.vegan === "1") { %>
+                <p class="recipe_diet"><span class="recipe_bold">Diet:</span> Vegan</p>
+            <% } else if (recipe.ovo_vegetarian === "1") { %>
+                <p class="recipe_diet"><span class="recipe_bold">Diet:</span>Vegetarian</p>
+            <% } else { %>
+                <p class="recipe_diet"><span class="recipe_bold">Diet:</span> Non-Vegetarian</p>
+            <% } %>
+        </div>
+       
+    </div>
+</div>
+                
+
+<%- include('footer.ejs') %>

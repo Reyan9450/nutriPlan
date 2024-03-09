@@ -1,0 +1,83 @@
+<%- include('header.ejs') %>
+    <!-- ========== NAVIGATION MENU ========== -->
+    <div id="cursor" class="cursor">
+        <div class="ring">
+          <div><!--Border--></div>
+        </div>
+        <div class="ring">
+          <div><!--Pointer--></div>   
+        </div>
+      </div>
+
+    <nav>
+      <div class="logo">
+        <a href=""><img src="HealthyFoodLogo.svg" alt="Logo Image" /></a>
+      </div>
+      <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/about">About us</a></li>
+        <li><a href="#">Transform</a></li>
+        <li><a href="/nutriplan">NutriPlan</a></li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </nav>
+
+    <!-- ========== LANDING PAGE CONTENT ==========  -->
+
+    <div class="container">
+      <div class="content">
+        <div class="text">
+          <h1>
+            <span class="underline"> Maintain </span> 
+            <span class="text">your  diet  with</span>   
+            <span class="typing" >NutriPlan</span>
+          </h1>
+          <p>
+            Dedicated fitness professional with a passion for improving client
+            health, wellness and quality of life.
+          </p>
+          <div class="buttons">
+            <a href="#" class="red-btn">Start Now</a>
+            <a href="#" class="black-btn">Why US?</a>
+          </div>
+          <a class="__certificate" href="#">Credentials</a>
+          <div class="certificates">
+            <img src="https://alvasinsiemria.com/Fitness-Website-Landing-Page-main/icons/assa.png" width="50px" alt="" />
+            <img src="https://alvasinsiemria.com/Fitness-Website-Landing-Page-main/icons/nasm.png" width="50px" alt="" />
+          </div>
+        </div>
+        <div class="visual">
+          <img class="man" id="man" src="https://alvasinsiemria.com/Fitness-Website-Landing-Page-main/icons/man-1.png" width="500px" alt="" />
+          <img id="threadmill" width="90px" src="https://alvasinsiemria.com/Fitness-Website-Landing-Page-main/icons/threadmill.png" alt="">
+          <img id="dumbbell" width="90px" src="https://alvasinsiemria.com/Fitness-Website-Landing-Page-main/icons/Dumbell.png" alt="">
+          <img id="kettlebell" src="https://alvasinsiemria.com/Fitness-Website-Landing-Page-main/icons/kettlebell.png" width="210px" alt="">
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+      window.botpressWebChat.init({
+          "composerPlaceholder": "Chat with bot",
+          "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+          "botId": "a53810a4-faa6-4542-b1a1-dc1930bb7079",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "a53810a4-faa6-4542-b1a1-dc1930bb7079",
+          "webhookId": "ab30c8cc-4176-400d-ac81-90a369c048c3",
+          "lazySocket": true,
+          "themeName": "prism",
+          "frontendVersion": "v1",
+          "showPoweredBy": true,
+          "theme": "prism",
+          "themeColor": "#2563eb"
+      });
+    </script>
+    <script src="https://alvasinsiemria.com/Fitness-Website-Landing-Page-main/js/nav.js"></script>
+    
+<%- include('footer.ejs') %>
